@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "676061172820",
+    "firebase_url": "https://lingolearn-42f32-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    "project_id": "lingolearn-42f32",
+    "storage_bucket": "lingolearn-42f32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676061172820:android:b448e1bfb349a34bc289c1",
+        "android_client_info": {
+          "package_name": "com.example.lingolearn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe12nLvCtPYLOwNZECgmtDTV_BjmqsvPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

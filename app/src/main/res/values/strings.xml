@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">LingoLearn</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_logout">Log Out</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_account">Account</string>
+    <string name="menu_purchase">Purchase</string>
+    <string name="menu_quiz">Quiz</string>
+    <string name="menu_vocabulary">Vocabulary</string>
+
+    <string name="splash_screen_info">Designed By: \n Khai Wen, Kok Wei</string>
+    <string name="register_page_password_hint"> Password \t\t\t\t (Hint: abcD@12345)</string>
+    <string name="inquiries">For any inquiry, please call 03-32551678 to our customer services.Or you can email to us lingolearn@gmail.com </string>
+</resources>

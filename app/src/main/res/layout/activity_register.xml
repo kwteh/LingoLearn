@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.register.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="369dp"
+        android:layout_height="815dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/audiowide"
+                android:text="Join Us Now!"
+                android:textAlignment="center"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvRegisterNewAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/allerta"
+                android:text=" Register New Account "
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextTextFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginBottom="@dimen/account_page_small_title_margin_bottom"
+                android:ems="10"
+                android:hint="First Name"
+                android:inputType="textPersonName"
+                android:paddingLeft="@dimen/account_page_small_title_padding_left" />
+
+            <EditText
+                android:id="@+id/editTextTextLastName"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/account_page_small_title_margin_bottom"
+                android:ems="10"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                android:paddingLeft="@dimen/account_page_small_title_padding_left" />
+
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/account_page_small_title_margin_bottom"
+                android:ems="10"
+                android:hint="Phone No."
+                android:inputType="phone"
+                android:paddingLeft="@dimen/account_page_small_title_padding_left" />
+
+            <EditText
+                android:id="@+id/editTextTextHomeAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/account_page_small_title_margin_bottom"
+                android:ems="10"
+                android:hint="Home Address "
+                android:inputType="textPersonName"
+                android:paddingLeft="@dimen/account_page_small_title_padding_left"
+                android:paddingBottom="20dp" />
+
+            <EditText
+                android:id="@+id/editTextTextEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/account_page_small_title_margin_bottom"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="@dimen/account_page_small_title_padding_left" />
+
+            <EditText
+                android:id="@+id/editTextUsername"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/account_page_small_title_margin_bottom"
+                android:ems="10"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:paddingLeft="@dimen/account_page_small_title_padding_left" />
+
+            <EditText
+                android:id="@+id/editTextTextNewPassword"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/account_page_small_title_margin_bottom"
+                android:ems="10"
+                android:hint="@string/register_page_password_hint"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/account_page_small_title_padding_left" />
+
+            <EditText
+                android:id="@+id/editTextTextNewPasswordConfirmation"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="Re-enter Password"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/account_page_small_title_padding_left" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/btnRegisterNow"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginBottom="130dp"
+                android:background="#CDCBCB"
+                android:text="Register Now !"
+                android:textAlignment="center"
+                android:textColor="@color/account_page_user_details_background_color" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
