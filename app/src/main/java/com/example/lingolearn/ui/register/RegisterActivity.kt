@@ -32,7 +32,7 @@ class RegisterActivity : AppCompatActivity() {
             val password = findViewById<EditText>(R.id.editTextTextNewPassword).text.toString()
             val passwordConfirmation = findViewById<EditText>(R.id.editTextTextNewPasswordConfirmation).text.toString()
 
-            val newUser = User( fName,lName, phoneNo, homeAddress, email, userName, password)
+            val newUser = User( fName,lName, phoneNo, homeAddress, email, userName, password, "User")
 
             emailValidationCheck(email)
             phoneNoValidationCheck(phoneNo)

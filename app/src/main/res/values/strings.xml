@@ -16,4 +16,12 @@
     <string name="splash_screen_info">Designed By: \n Khai Wen, Kok Wei</string>
     <string name="register_page_password_hint"> Password \t\t\t\t (Hint: abcD@12345)</string>
     <string name="inquiries">For any inquiry, please call 03-32551678 to our customer services.Or you can email to us lingolearn@gmail.com </string>
+    <string name="purchase_rad_english">English</string>
+    <string name="purchase_rad_chinese">中文/Chinese</string>
+    <string name="purchase_btn_next">Next</string>
+    <string name="purchase_select_txt">Select your language:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quiz_submit_btn">Submit</string>
+    <string name="quiz_question_image_desc">Question Image</string>
 </resources>

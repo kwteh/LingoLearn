@@ -66,7 +66,7 @@ class LoginActivity : AppCompatActivity() {
 
                     val logRec = LoginRecord(tfUsername, formatted)
 
-                    database = FirebaseDatabase.getInstance().getReference("LogRecord")
+                    database = FirebaseDatabase.getInstance().getReference("LoginRecord")
                     database.child(tfUsername).setValue(logRec).addOnSuccessListener {
                         Toast.makeText(this, "Welcome Back, ${tfUsername}", Toast.LENGTH_SHORT).show()
                     }
