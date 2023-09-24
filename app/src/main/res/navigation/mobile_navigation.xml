@@ -10,22 +10,14 @@
         android:name="com.example.lingolearn.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/app_bar_main" />
-
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.lingolearn.ui.gallery.GalleryFragment"
-        android:label="@string/menu_account"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.lingolearn.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_purchase"
-        tools:layout="@layout/fragment_slideshow" />
-
+    <activity
+        android:id="@+id/nav_account"
+        android:name="com.example.lingolearn.ui.profile.ProfileActivity"
+        android:label="Profile"
+        tools:layout="@layout/activity_profile"/>
     <activity
         android:id="@+id/nav_quiz"
         android:name="com.example.lingolearn.ui.quiz.QuizLanguageActivity"
-        android:label="activity_quiz_language"
+        android:label="Quiz"
         tools:layout="@layout/activity_quiz_language" />
 </navigation>

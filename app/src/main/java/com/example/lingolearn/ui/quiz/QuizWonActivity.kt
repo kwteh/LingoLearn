@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import com.example.lingolearn.MainActivity
 import com.example.lingolearn.R
 import com.google.firebase.database.DatabaseReference
@@ -23,17 +24,19 @@ class QuizWonActivity : AppCompatActivity() {
 
         val returnBtn: Button = findViewById(R.id.returnBtn)
         returnBtn.setOnClickListener {
-            var database : DatabaseReference
-            val intent = Intent(this, MainActivity::class.java)
-            var username : String
+            val database: DatabaseReference = FirebaseDatabase.getInstance().getReference("PassData")
 
-            database = FirebaseDatabase.getInstance().getReference("PassData")
-            database.get().addOnSuccessListener {
-                username = database.child("username").get().toString()
+            database.child("username").get().addOnSuccessListener { dataSnapshot ->
+                val username = dataSnapshot.value.toString()
+                val intent = Intent(this, MainActivity::class.java)
+
+                intent.putExtra("username", username)
+                startActivity(intent)
+                finish()
+
+            }.addOnFailureListener { exception ->
+                Toast.makeText(this, "Failure: $exception", Toast.LENGTH_SHORT).show()
             }
-            startActivity(intent)
-
-            finish()
         }
     }
 }

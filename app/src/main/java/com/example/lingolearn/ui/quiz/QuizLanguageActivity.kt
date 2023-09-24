@@ -31,6 +31,7 @@ class QuizLanguageActivity : AppCompatActivity() {
                     intent.putExtra("language", "Chinese")
                 }
                 startActivity(intent)
+                finish()
             }
             else {
                 Toast.makeText(this, "Please select a language", Toast.LENGTH_SHORT).show()

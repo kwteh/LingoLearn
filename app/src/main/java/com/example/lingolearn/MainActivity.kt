@@ -1,5 +1,6 @@
 package com.example.lingolearn
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.Menu
@@ -17,6 +18,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lingolearn.ui.login.LogoutRecord
 import com.example.lingolearn.databinding.ActivityMainBinding
+import com.example.lingolearn.ui.login.LoginActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -47,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_home, R.id.nav_account, R.id.nav_quiz
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -93,8 +95,11 @@ class MainActivity : AppCompatActivity() {
                 database = FirebaseDatabase.getInstance().getReference("Logout Record")
                 database.child(userName.toString()).setValue(logoutRecord).addOnSuccessListener {
                     Toast.makeText(this, "Logout successfully !", Toast.LENGTH_SHORT).show()
+
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 }
-                finish()
             }
             .show()
     }

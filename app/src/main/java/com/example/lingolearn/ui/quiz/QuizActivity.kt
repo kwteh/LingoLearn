@@ -91,6 +91,7 @@ class QuizActivity : AppCompatActivity() {
 
                         showToast("Congratulations!")
                         startActivity(intent)
+                        finish()
                     }
                 }
                 else {
@@ -99,6 +100,7 @@ class QuizActivity : AppCompatActivity() {
 
                     showToast("Wrong!")
                     startActivity(intent)
+                    finish()
                 }
             }
         }
