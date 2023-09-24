@@ -32,7 +32,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="sans-serif"
-        android:text="@{game.currentQuestion.text}"
+        android:text="@{game.currentQuiz.text}"
         android:textSize="30sp"
         android:textStyle="bold"
         android:typeface="normal"

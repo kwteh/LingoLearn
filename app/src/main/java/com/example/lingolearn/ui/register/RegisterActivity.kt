@@ -53,8 +53,7 @@ class RegisterActivity : AppCompatActivity() {
                         database = FirebaseDatabase.getInstance().getReference("User")
                         database.child(userName).setValue(newUser).addOnSuccessListener {
 
-                            Toast.makeText(this, "Successfully Register!", Toast.LENGTH_SHORT)
-                                .show()
+                            Toast.makeText(this, "Successfully Register!", Toast.LENGTH_SHORT).show()
 
                         }.addOnFailureListener { exception ->
                             Toast.makeText(this, "Failure 1: ${exception.message}", Toast.LENGTH_SHORT).show()

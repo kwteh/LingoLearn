@@ -24,4 +24,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="quiz_submit_btn">Submit</string>
     <string name="quiz_question_image_desc">Question Image</string>
+    <string name="quiz_return_button">Return</string>
+    <string name="quiz_retry_button">Retry</string>
 </resources>

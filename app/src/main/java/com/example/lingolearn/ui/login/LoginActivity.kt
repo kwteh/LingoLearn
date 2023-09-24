@@ -39,7 +39,6 @@ class LoginActivity : AppCompatActivity() {
             val password: String = tfPassword.text.toString()
 
             readData(userName, password)
-
         }
 
         btnRegister.setOnClickListener() {
@@ -47,7 +46,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun readData(tfUsername: String, tfPassword: String) {
@@ -68,13 +66,11 @@ class LoginActivity : AppCompatActivity() {
 
                     database = FirebaseDatabase.getInstance().getReference("LoginRecord")
                     database.child(tfUsername).setValue(logRec).addOnSuccessListener {
-                        Toast.makeText(this, "Welcome Back, ${tfUsername}", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Welcome Back, $tfUsername", Toast.LENGTH_SHORT).show()
                     }
                     updateData(v.text.toString())
 
                     startActivity(intent)
-
-
 
                 }else{
                     Toast.makeText(this, "Incorrect Password", Toast.LENGTH_SHORT).show()
@@ -82,18 +78,15 @@ class LoginActivity : AppCompatActivity() {
 
             } else {
                 Toast.makeText(this, "Username does not exists!", Toast.LENGTH_SHORT).show()
-
             }
 
         }.addOnFailureListener {
             Toast.makeText(this, "Username does not exists!", Toast.LENGTH_SHORT).show()
-
         }
     }
 
     private fun updateData(x: String){
-        var database : DatabaseReference
-        database = FirebaseDatabase.getInstance().getReference("PassData")
+        var database : DatabaseReference = FirebaseDatabase.getInstance().getReference("PassData")
 
         val up = mapOf<String,String>(
             "username" to x,
@@ -102,7 +95,6 @@ class LoginActivity : AppCompatActivity() {
         database.updateChildren(up)
 
         val parentLayout: View = findViewById(android.R.id.content)
-        val Snackbar = Snackbar.make(parentLayout, "refer success !", Snackbar.LENGTH_SHORT)
-        Snackbar.show()
+        Snackbar.make(parentLayout, "refer success !", Snackbar.LENGTH_SHORT).show()
     }
 }
