@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="330dp"
+            android:layout_height="700dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/audiowide"
+                    android:paddingTop="70dp"
+                    android:text="Profile"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/usernameTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:text="Username :"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/usernameEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/account_page_user_details_background_color"
+                    android:enabled="false"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/roleTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:text="Role :"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/roleEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/account_page_user_details_background_color"
+                    android:enabled="false"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/firstnameTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:text="First Name :"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/firstnameEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/account_page_user_details_background_color"
+                    android:enabled="false"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/lastnameTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:text="Last Name :"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/lastnameEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/account_page_user_details_background_color"
+                    android:enabled="false"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/emailTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:text="Email Address :"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/emailEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/account_page_user_details_background_color"
+                    android:enabled="false"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/phoneTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:text="Phone Number :"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/phoneEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/account_page_user_details_background_color"
+                    android:enabled="false"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/addressTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:text="Address :"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/addressEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/account_page_user_details_background_color"
+                    android:enabled="false"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:id="@+id/editProfileBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="Edit" />
+
+                <Button
+                    android:id="@+id/saveProfileBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="Save &amp; Back"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -6,7 +6,7 @@ data class User(
     var phoneNo : String ?= null,
     var homeAddress : String ?= null,
     var email : String ?= null,
+    var uid : String ?= null,
     var userName : String ?= null,
-    var password : String ?= null,
     var role : String ?= null
 )

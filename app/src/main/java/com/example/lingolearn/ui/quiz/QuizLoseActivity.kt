@@ -1,28 +1,24 @@
 package com.example.lingolearn.ui.quiz
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import com.example.lingolearn.R
+import androidx.appcompat.app.AppCompatActivity
+import com.example.lingolearn.databinding.ActivityQuizLoseBinding
 
 class QuizLoseActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityQuizLoseBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz_lose)
+        binding = ActivityQuizLoseBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val score: Int = intent.getIntExtra("score", -1)
-        val scoreTxt : TextView = findViewById(R.id.scoreLoseTxt)
-        val txt = "Score: $score"
+        binding.scoreLoseTxt.text = "Score: $score"
 
-        scoreTxt.text = txt
-
-        val tryAgainBtn : Button = findViewById(R.id.tryAgainBtn)
-        tryAgainBtn.setOnClickListener{
-            val intent = Intent(this, QuizActivity::class.java)
-            startActivity(intent)
-
+        binding.tryAgainBtn.setOnClickListener{
+            startActivity(Intent(this, QuizActivity::class.java))
             finish()
         }
     }

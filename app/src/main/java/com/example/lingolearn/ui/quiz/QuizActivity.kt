@@ -10,6 +10,7 @@ import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
 import com.example.lingolearn.R
+import com.example.lingolearn.databinding.ActivityQuizBinding
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -19,6 +20,7 @@ import com.google.firebase.database.ValueEventListener
 import kotlin.math.min
 
 class QuizActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityQuizBinding
     private lateinit var database : DatabaseReference
     private val quizList: MutableList<Quiz> = mutableListOf()
 
@@ -29,9 +31,10 @@ class QuizActivity : AppCompatActivity() {
     private var score = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz)
+        binding = ActivityQuizBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val quesImage: ImageView = findViewById(R.id.questionImage)
+        val quesImage: ImageView = binding.questionImage
         val language: String = intent.getStringExtra("language").toString()
 
         // Set Image for ImageView
@@ -65,16 +68,16 @@ class QuizActivity : AppCompatActivity() {
             }
         })
 
-        val submitBtn: Button = findViewById(R.id.submitButton)
+        val submitBtn: Button = binding.submitButton
         submitBtn.setOnClickListener {
-            val checkedId = findViewById<RadioGroup>(R.id.questionRadioGroup).checkedRadioButtonId
+            val checkedId = binding.questionRadioGroup.checkedRadioButtonId
 
             if (checkedId != -1) {
                 var answerIndex = 0
                 when (checkedId) {
-                    R.id.secondAnswerRadioButton -> answerIndex = 1
-                    R.id.thirdAnswerRadioButton -> answerIndex = 2
-                    R.id.fourthAnswerRadioButton -> answerIndex = 3
+                    binding.secondAnswerRadioButton.id -> answerIndex = 1
+                    binding.thirdAnswerRadioButton.id -> answerIndex = 2
+                    binding.fourthAnswerRadioButton.id -> answerIndex = 3
                 }
                 if (currentAnswers[answerIndex] == currentQuiz.answers!![0]) {
                     quizIndex++
@@ -113,11 +116,11 @@ class QuizActivity : AppCompatActivity() {
     }
 
     private fun setQuiz() {
-        val quesTxt: TextView = findViewById(R.id.questionText)
-        val firstAnsRad: RadioButton = findViewById(R.id.firstAnswerRadioButton)
-        val secondAnsRad: RadioButton = findViewById(R.id.secondAnswerRadioButton)
-        val thirdAnsRad: RadioButton = findViewById(R.id.thirdAnswerRadioButton)
-        val fourthAnsRad: RadioButton = findViewById(R.id.fourthAnswerRadioButton)
+        val quesTxt: TextView = binding.questionText
+        val firstAnsRad: RadioButton = binding.firstAnswerRadioButton
+        val secondAnsRad: RadioButton = binding.secondAnswerRadioButton
+        val thirdAnsRad: RadioButton = binding.thirdAnswerRadioButton
+        val fourthAnsRad: RadioButton = binding.fourthAnswerRadioButton
 
         currentQuiz = quizList[quizIndex]
         currentAnswers = currentQuiz.answers!!.toMutableList()

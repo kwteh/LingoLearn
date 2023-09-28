@@ -13,7 +13,7 @@
         android:theme="@style/Theme.LingoLearn"
         tools:targetApi="31">
         <activity
-            android:name=".ui.profile.ProfileActivity"
+            android:name=".ui.login.ForgotPasswordActivity"
             android:exported="false" />
         <activity
             android:name=".ui.quiz.QuizWonActivity"
@@ -48,9 +48,6 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.LingoLearn.NoActionBar" />
-        <activity
-            android:name=".ui.home.HomeActivity"
-            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
