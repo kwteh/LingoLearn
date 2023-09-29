@@ -49,7 +49,6 @@ class MainActivity : AppCompatActivity() {
         val navView: NavigationView = binding.navView
         val headerView = navView.getHeaderView(0)
 
-        // Username and Email for NavigationDrawerHeader
         val headerUsernameTxt: TextView = headerView.findViewById(R.id.headerUsername)
         val headerEmailText: TextView = headerView.findViewById(R.id.headerEmail)
         val currUserUid = auth.currentUser!!.uid.toString()
@@ -69,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_account, R.id.nav_quiz, R.id.nav_aboutus
+                R.id.nav_home, R.id.nav_account, R.id.nav_quiz, R.id.nav_aboutus, R.id.nav_quiz_management
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

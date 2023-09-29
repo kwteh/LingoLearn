@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/item_quiz_question_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="16dp"
+        android:text="Question"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/item_quiz_answer_1_txt"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/item_quiz_answer_1_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ans1"
+        app:layout_constraintTop_toBottomOf="@+id/item_quiz_question_text"
+        app:layout_constraintBottom_toTopOf="@id/item_quiz_answer_2_txt"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/item_quiz_answer_2_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ans2"
+        app:layout_constraintTop_toBottomOf="@id/item_quiz_answer_1_txt"
+        app:layout_constraintBottom_toTopOf="@id/item_quiz_answer_3_txt"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/item_quiz_answer_3_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ans3"
+        app:layout_constraintTop_toBottomOf="@id/item_quiz_answer_2_txt"
+        app:layout_constraintBottom_toTopOf="@id/item_quiz_answer_4_txt"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/item_quiz_answer_4_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ans4"
+        app:layout_constraintTop_toBottomOf="@id/item_quiz_answer_3_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/item_quiz_edit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        app:layout_constraintTop_toBottomOf="@id/item_quiz_question_text"
+        app:layout_constraintBottom_toTopOf="@+id/item_quiz_delete_btn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/item_quiz_delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

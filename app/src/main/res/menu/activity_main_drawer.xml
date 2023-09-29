@@ -28,5 +28,9 @@
             android:id="@+id/nav_aboutus"
             android:icon="@drawable/ic_baseline_question_answer_24"
             android:title="About Us" />
+        <item
+            android:id="@+id/nav_quiz_management"
+            android:icon="@drawable/quiz"
+            android:title="Quiz Management" />
     </group>
 </menu>
