@@ -22,7 +22,7 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        this.title = "RegistrationActivity"
+        this.title = "Register"
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().getReference("User")

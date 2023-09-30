@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        this.title = "LoginActivity"
+        this.title = "Login"
 
         auth = FirebaseAuth.getInstance()
 
