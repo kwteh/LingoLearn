@@ -13,6 +13,15 @@
         android:theme="@style/Theme.LingoLearn"
         tools:targetApi="31">
         <activity
+            android:name=".ui.payment.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.product.ProductViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.profile.ProfileEditActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.admin.quiz.QuizEditActivity"
             android:exported="false" />
         <activity
@@ -32,9 +41,6 @@
             android:exported="false" />
         <activity
             android:name=".ui.quiz.QuizLanguageActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.purchase.PurchaseActivity"
             android:exported="false" />
         <activity
             android:name=".ui.splash.SplashActivity"

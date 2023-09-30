@@ -52,6 +52,18 @@ class MainActivity : AppCompatActivity() {
         val headerUsernameTxt: TextView = headerView.findViewById(R.id.headerUsername)
         val headerEmailText: TextView = headerView.findViewById(R.id.headerEmail)
         val currUserUid = auth.currentUser!!.uid.toString()
+        var userIsAdmin = false
+
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        // Passing each menu ID as a set of Ids because each menu should be considered as top level destinations.
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.nav_home, R.id.nav_account, R.id.nav_quiz, R.id.nav_aboutus, R.id.nav_quiz_management, R.id.nav_profile_management
+            ), drawerLayout
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
+
         database = FirebaseDatabase.getInstance().getReference("User")
         database.child(currUserUid).get().addOnSuccessListener {
             val username = it.child("userName").value.toString()
@@ -60,19 +72,14 @@ class MainActivity : AppCompatActivity() {
             headerUsernameTxt.text = username
             headerEmailText.text = email
 
+            if (it.child("role").value.toString() == "Admin") userIsAdmin = true
+
+            navView.menu.findItem(R.id.nav_quiz_management).isVisible = userIsAdmin
+            navView.menu.findItem(R.id.nav_profile_management).isVisible = userIsAdmin
+
         }.addOnFailureListener {
             Toast.makeText(this, "Username doesn't exist!", Toast.LENGTH_SHORT).show()
         }
-
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        // Passing each menu ID as a set of Ids because each menu should be considered as top level destinations.
-        appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.nav_home, R.id.nav_account, R.id.nav_quiz, R.id.nav_aboutus, R.id.nav_quiz_management
-            ), drawerLayout
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
