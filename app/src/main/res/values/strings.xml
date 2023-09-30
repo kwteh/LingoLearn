@@ -16,10 +16,10 @@
     <string name="splash_screen_info">Designed By: \n Khai Wen, Kok Wei</string>
     <string name="register_page_password_hint"> Password \t\t\t\t (Hint: abcD@12345)</string>
     <string name="inquiries">For any inquiry, please call +6011-21772618 to our customer services.Or you can email to us support@lingolearn.com</string>
-    <string name="purchase_rad_english">English</string>
-    <string name="purchase_rad_chinese">中文/Chinese</string>
-    <string name="purchase_btn_next">Next</string>
-    <string name="purchase_select_txt">Select your language:</string>
+    <string name="quiz_rad_english">English</string>
+    <string name="quiz_rad_chinese">中文/Chinese</string>
+    <string name="quiz_btn_next">Next</string>
+    <string name="quiz_select_txt">Select your language:</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="quiz_submit_btn">Submit</string>
@@ -35,4 +35,6 @@
     <string name="about_us_team">With the help of the APP LingoLearn, those who desire to learn English and Chinese can fast advance in their language skills.\\n\\n  YEW KOK WEI(Leader) \\n \\t\\t *Expertise: Director CEO \\n \\t\\t *Email: yewkw@gmail.com \\n\\n TEH KHAI WEN \\n \\t\\t *Expertise: Director COO \\n \\t\\t *Email: khaiwenteh@gmail.com \\n\\nOur team, which included TARUMT students YEW KOK WEI (Leader) and TEH KHAI WEN, created this app for the MAD (Mobile App) topic.</string>
     <string name="about_us_company">Our Company :\n\nLingoLearn is a company that helps improve Quality Education. Our app is currently working on several modules that allow people to quickly improve their language skills. We also sell some stationery that can be used by everyone when there is no cell phone state.</string>
     <string name="about_us_contact">Have Questions ?\n\nFeel free to email or call us any weekdays between 10am to 6pm\n\n Email :\nsupport@lingolearn.com\n\n Phone Number:\n6011-21772618</string>
+    <string name="payment_e_wallet">E-Wallet</string>
+    <string name="payment_online_banking">Online Banking</string>
 </resources>

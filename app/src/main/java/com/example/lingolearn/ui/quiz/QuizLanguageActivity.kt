@@ -24,14 +24,15 @@ class QuizLanguageActivity : AppCompatActivity() {
 
             if (checkedLanguage != -1) {
                 val selected = findViewById<RadioButton>(checkedLanguage).text.toString()
+                val intent = Intent(this, QuizActivity::class.java)
 
-                if (selected == getString(R.string.purchase_rad_english)) {
+                if (selected == getString(R.string.quiz_rad_english)) {
                     intent.putExtra("language", "English")
                 }
-                if (selected == getString(R.string.purchase_rad_chinese)) {
+                if (selected == getString(R.string.quiz_rad_chinese)) {
                     intent.putExtra("language", "Chinese")
                 }
-                startActivity(Intent(this, QuizActivity::class.java))
+                startActivity(intent)
                 finish()
             }
             else {

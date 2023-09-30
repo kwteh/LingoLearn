@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.payment.PaymentOnlineBankingActivity">
+
+    <TextView
+        android:id="@+id/payment_bank_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Online Banking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/payment_bank_name_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payment_bank_title" />
+
+    <TextView
+        android:id="@+id/payment_bank_bank_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bank: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payment_bank_name_in" />
+
+    <TextView
+        android:id="@+id/payment_bank_bank_acc_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bank Account: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payment_bank_bank_in" />
+
+    <TextView
+        android:id="@+id/payment_bank_pac_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PAC: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payment_bank_bank_acc_in" />
+
+    <Button
+        android:id="@+id/payment_bank_cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payment_bank_pac_in" />
+
+    <Button
+        android:id="@+id/payment_bank_proceed_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proceed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payment_bank_pac_in" />
+
+    <EditText
+        android:id="@+id/payment_bank_name_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="(Lim Goh Tong)"
+        app:layout_constraintStart_toEndOf="@+id/payment_bank_name_title"
+        app:layout_constraintTop_toBottomOf="@+id/payment_bank_title" />
+
+    <EditText
+        android:id="@+id/payment_bank_bank_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="(Maybank, Public Bank)"
+        app:layout_constraintStart_toEndOf="@+id/payment_bank_bank_title"
+        app:layout_constraintTop_toBottomOf="@+id/payment_bank_name_in" />
+
+    <EditText
+        android:id="@+id/payment_bank_bank_acc_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="(123412341234)"
+        app:layout_constraintStart_toEndOf="@+id/payment_bank_bank_acc_title"
+        app:layout_constraintTop_toBottomOf="@+id/payment_bank_bank_in" />
+
+    <EditText
+        android:id="@+id/payment_bank_pac_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="(123456)"
+        app:layout_constraintStart_toEndOf="@+id/payment_bank_pac_title"
+        app:layout_constraintTop_toBottomOf="@+id/payment_bank_bank_acc_in" />
+
+    <Button
+        android:id="@+id/payment_bank_pac_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Request PAC"
+        app:layout_constraintStart_toEndOf="@+id/payment_bank_pac_in"
+        app:layout_constraintTop_toTopOf="@+id/payment_bank_pac_in" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

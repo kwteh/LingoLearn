@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/allerta"
-        android:text="@string/purchase_select_txt"
+        android:text="@string/quiz_select_txt"
         android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@id/radgroupLanguage"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
             android:layout_marginTop="60dp"
             android:paddingEnd="83dp"
             android:checked="true"
-            android:text="@string/purchase_rad_english"
+            android:text="@string/quiz_rad_english"
             android:textSize="30sp" />
 
         <RadioButton
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="@string/purchase_rad_chinese"
+            android:text="@string/quiz_rad_chinese"
             android:textSize="30sp" />
     </RadioGroup>
 
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="140dp"
         android:padding="10dp"
-        android:text="@string/purchase_btn_next"
+        android:text="@string/quiz_btn_next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
