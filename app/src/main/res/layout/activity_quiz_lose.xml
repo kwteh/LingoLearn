@@ -12,9 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="354dp"
         app:layout_constraintBottom_toTopOf="@+id/scoreLoseTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/quiz_lose"
-        tools:layout_editor_absoluteX="0dp" />
+        app:srcCompat="@drawable/quiz_lose" />
 
     <TextView
         android:id="@+id/scoreLoseTxt"
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:fontFamily="@font/allerta"
+        android:textColor="#CC1616"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/tryAgainBtn"
         app:layout_constraintEnd_toEndOf="parent"

@@ -144,7 +144,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/round_btn"
                 android:backgroundTint="@color/green_500"
-                android:text="Register Now !"
+                android:text="Register Now"
                 android:textAlignment="center"
                 android:textColor="@color/account_page_user_details_background_color" />
 

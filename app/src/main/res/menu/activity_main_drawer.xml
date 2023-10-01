@@ -6,7 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/home"
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_account"
@@ -26,7 +26,7 @@
             android:title="Product" />
         <item
             android:id="@+id/nav_payment_history"
-            android:icon="@drawable/product"
+            android:icon="@drawable/payment_history"
             android:title="Payment History" />
         <item
             android:id="@+id/nav_aboutus"
@@ -34,15 +34,15 @@
             android:title="About Us" />
         <item
             android:id="@+id/nav_quiz_management"
-            android:icon="@drawable/quiz"
+            android:icon="@drawable/quiz_management_icon"
             android:title="Quiz Management" />
         <item
             android:id="@+id/nav_profile_management"
-            android:icon="@drawable/account"
+            android:icon="@drawable/user_management_icon"
             android:title="Profile Management" />
         <item
             android:id="@+id/nav_vocabulary_management"
-            android:icon="@drawable/vocabulary"
+            android:icon="@drawable/vocabulary_manage_icon"
             android:title="Vocabulary Management" />
     </group>
 </menu>

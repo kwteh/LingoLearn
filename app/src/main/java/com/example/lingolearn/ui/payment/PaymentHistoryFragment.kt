@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lingolearn.databinding.FragmentPaymentHistoryBinding
 import com.example.lingolearn.ui.adapter.PaymentAdapter
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -20,6 +21,7 @@ class PaymentHistoryFragment : Fragment() {
 
     private lateinit var binding: FragmentPaymentHistoryBinding
     private lateinit var database: DatabaseReference
+    private lateinit var auth: FirebaseAuth
     private lateinit var adapter: PaymentAdapter
     private var paymentList: MutableList<String> = mutableListOf()
 
@@ -29,36 +31,39 @@ class PaymentHistoryFragment : Fragment() {
     ): View? {
         binding = FragmentPaymentHistoryBinding.inflate(inflater, container, false)
 
-        return binding.root
-
-        loadPaymentFromDatabase()
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        database = FirebaseDatabase.getInstance().getReference("PaymentHistory")
-
+        auth = FirebaseAuth.getInstance()
         adapter = PaymentAdapter(paymentList)
 
         binding.paymentHistoryRecycler.adapter = adapter
         binding.paymentHistoryRecycler.layoutManager = LinearLayoutManager(requireContext())
+
+        loadPaymentFromDatabase()
+
+        return binding.root
     }
 
     private fun loadPaymentFromDatabase() {
-        database.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                paymentList.clear()
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            val userId = currentUser.uid
 
-                for (paymentSnapshot in snapshot.children) {
-                    paymentList.add(paymentSnapshot.getValue(String::class.java)!!)
+            database = FirebaseDatabase.getInstance().getReference("PaymentHistory").child(userId)
+
+            database.addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    paymentList.clear()
+
+                    for (paymentSnapshot in snapshot.children) {
+                        paymentList.add(paymentSnapshot.getValue(String::class.java)!!)
+                    }
+                    adapter.notifyDataSetChanged()
                 }
-                adapter.notifyDataSetChanged()
-            }
 
-            override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(requireContext(), error.toString(), Toast.LENGTH_SHORT).show()
-                Log.e("PaymentHistoryError", error.message)
-            }
-        })
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(requireContext(), error.toString(), Toast.LENGTH_SHORT).show()
+                    Log.e("PaymentHistoryError", error.message)
+                }
+            })
+        }
     }
 }

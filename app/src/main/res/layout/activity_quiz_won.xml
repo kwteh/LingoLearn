@@ -12,10 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="354dp"
         app:layout_constraintBottom_toTopOf="@+id/scoreWinTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.511"
-        app:srcCompat="@drawable/quiz_won"
-        tools:layout_editor_absoluteX="0dp" />
+        app:srcCompat="@drawable/quiz_won" />
 
     <TextView
         android:id="@+id/scoreWinTxt"
@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:fontFamily="@font/allerta"
+        android:textColor="#009688"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/returnBtn"
         app:layout_constraintEnd_toEndOf="parent"

@@ -51,7 +51,7 @@
             android:layout_width="262dp"
             android:layout_height="64dp"
             android:layout_marginTop="16dp"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="20dp"
             android:fontFamily="@font/audiowide"
             android:text="Quiz Management"
             android:textSize="26sp"
