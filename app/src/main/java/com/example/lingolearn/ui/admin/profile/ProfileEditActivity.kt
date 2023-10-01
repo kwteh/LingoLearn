@@ -1,9 +1,9 @@
 package com.example.lingolearn.ui.admin.profile
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.lingolearn.databinding.ActivityProfileEditBinding
 import com.example.lingolearn.ui.register.User
 import com.google.firebase.database.DatabaseReference
@@ -37,28 +37,44 @@ class ProfileEditActivity : AppCompatActivity() {
         }
 
         binding.profileEditSubmitBtn.setOnClickListener {
-            database.child(uid).get().addOnSuccessListener {
-                val fName = binding.profileEditFname.text.toString()
-                val lName = binding.profileEditLname.text.toString()
-                val phoneNo = binding.profileEditPhone.text.toString()
-                val homeAddress = binding.profileEditAddress.text.toString()
-                val email = it.child("email").value.toString()
-                val uid = it.child("uid").value.toString()
-                val userName = binding.profileEditUsername.text.toString()
-                val role = binding.profileEditRole.text.toString()
+            val phoneValidation = "^(\\+?6?01)[02-46-9][0-9]{7}\$|^(\\+?6?01)[1][-][0-9]{8}\$"
 
-                val editedUser = User(fName, lName, phoneNo, homeAddress, email, uid, userName, role)
+            if (binding.profileEditFname.text.isEmpty()) {
+                binding.profileEditFname.error = "First name cannot be empty"
+            } else if (binding.profileEditLname.text.isEmpty()) {
+                binding.profileEditLname.error = "Last name cannot be empty"
+            } else if (!binding.profileEditPhone.text.matches(phoneValidation.toRegex())) {
+                binding.profileEditPhone.error = "Invalid phone"
+            } else if (binding.profileEditAddress.text.isEmpty()) {
+                binding.profileEditAddress.error = "Address cannot be empty"
+            } else if (binding.profileEditUsername.text.isEmpty()) {
+                binding.profileEditAddress.error = "Username cannot be empty"
+            } else if (binding.profileEditRole.text.toString() != "Admin" && binding.profileEditRole.text.toString() != "User") {
+                binding.profileEditRole.error = "Role can only be 'Admin' or 'User'"
+            } else {
+                database.child(uid).get().addOnSuccessListener {
+                    val fName = binding.profileEditFname.text.toString()
+                    val lName = binding.profileEditLname.text.toString()
+                    val phoneNo = binding.profileEditPhone.text.toString()
+                    val homeAddress = binding.profileEditAddress.text.toString()
+                    val email = it.child("email").value.toString()
+                    val uid = it.child("uid").value.toString()
+                    val userName = binding.profileEditUsername.text.toString()
+                    val role = binding.profileEditRole.text.toString()
 
-                database.child(uid).setValue(editedUser).addOnSuccessListener {
-                    Toast.makeText(this, "Profile edited successfully!", Toast.LENGTH_SHORT).show()
-                    finish()
+                    val editedUser = User(fName, lName, phoneNo, homeAddress, email, uid, userName, role)
+
+                    database.child(uid).setValue(editedUser).addOnSuccessListener {
+                        Toast.makeText(this, "Profile edited successfully!", Toast.LENGTH_SHORT).show()
+                        finish()
+                    }.addOnFailureListener {
+                        Toast.makeText(this, it.message.toString(), Toast.LENGTH_SHORT).show()
+                        Log.e("ProfileEditError", it.message.toString())
+                    }
                 }.addOnFailureListener {
                     Toast.makeText(this, it.message.toString(), Toast.LENGTH_SHORT).show()
                     Log.e("ProfileEditError", it.message.toString())
                 }
-            }.addOnFailureListener {
-                Toast.makeText(this, it.message.toString(), Toast.LENGTH_SHORT).show()
-                Log.e("ProfileEditError", it.message.toString())
             }
         }
 

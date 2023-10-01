@@ -1,10 +1,9 @@
 package com.example.lingolearn.ui.admin.quiz
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.example.lingolearn.R
+import androidx.appcompat.app.AppCompatActivity
 import com.example.lingolearn.databinding.ActivityQuizEditBinding
 import com.example.lingolearn.ui.quiz.Quiz
 import com.google.firebase.database.DataSnapshot
@@ -53,16 +52,19 @@ class QuizEditActivity : AppCompatActivity() {
             val ans3 = binding.quizEditAns3.text.toString()
             val ans4 = binding.quizEditAns4.text.toString()
 
-            val editedQuiz = Quiz(text = question, answers = listOf(ans1, ans2, ans3, ans4))
+            if (question.isEmpty() || ans1.isEmpty() || ans2.isEmpty() || ans3.isEmpty() || ans4.isEmpty()) {
+                Toast.makeText(this, "Inputs cannot be empty", Toast.LENGTH_SHORT).show()
+            } else {
+                val editedQuiz = Quiz(text = question, answers = listOf(ans1, ans2, ans3, ans4))
 
-            database.child(quizKey).setValue(editedQuiz).addOnSuccessListener {
-                Toast.makeText(this@QuizEditActivity, "Quiz updated successfully", Toast.LENGTH_SHORT).show()
-                finish()
-            }.addOnFailureListener {
-                Toast.makeText(this@QuizEditActivity, it.message.toString(), Toast.LENGTH_SHORT).show()
-                Log.e("QuizEditError", it.message.toString())
+                database.child(quizKey).setValue(editedQuiz).addOnSuccessListener {
+                    Toast.makeText(this@QuizEditActivity, "Quiz updated successfully", Toast.LENGTH_SHORT).show()
+                    finish()
+                }.addOnFailureListener {
+                    Toast.makeText(this@QuizEditActivity, it.message.toString(), Toast.LENGTH_SHORT).show()
+                    Log.e("QuizEditError", it.message.toString())
+                }
             }
-
         }
 
         binding.quizEditCancelBtn.setOnClickListener {

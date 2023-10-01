@@ -69,7 +69,7 @@ class VocabularyManagementFragment : Fragment() {
     }
 
     private fun addVocabulary(vocabulary: String) {
-        if (!vocabulary.isEmpty()) {
+        if (vocabulary.isNotEmpty()) {
             vocabularyList.add(vocabulary)
             database.setValue(vocabularyList).addOnSuccessListener {
                 Toast.makeText(requireContext(), "Vocabulary added successfully", Toast.LENGTH_SHORT).show()

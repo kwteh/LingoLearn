@@ -29,17 +29,34 @@ class PaymentOnlineBankingActivity : AppCompatActivity() {
         val price = intent.getStringExtra("price")
 
         binding.paymentBankProceedBtn.setOnClickListener {
+            val name = binding.paymentBankNameIn
+            val bank = binding.paymentBankBankIn
+            val bankAcc = binding.paymentBankBankAccIn
+            val pac = binding.paymentBankPacIn
 
-            val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
-            val paymentHistory = "${dateFormat.format(Date())}: OnlineBanking: $price"
-            val paymentHistoryRef = database.child(auth.currentUser!!.uid).push()
+            val bankAccPattern = "^\\d{12}$"
+            val pacPattern = "^\\d{6}$"
 
-            paymentHistoryRef.setValue(paymentHistory).addOnSuccessListener {
-                Toast.makeText(this, "Payment Successful", Toast.LENGTH_SHORT).show()
-                finish()
-            }.addOnFailureListener {
-                Toast.makeText(this, it.message.toString(), Toast.LENGTH_SHORT).show()
-                Log.e("PaymentOnlineBankingError", it.message.toString())
+            if (name.text.toString().isEmpty()) {
+                name.error = "Please enter your name"
+            } else if (bank.text.toString().isEmpty()) {
+                bank.error = "Please enter your bank"
+            } else if (!bankAcc.text.toString().matches(bankAccPattern.toRegex())) {
+                bankAcc.error = "Invalid bank acc (xxxxxxxxxxxx)"
+            } else if (!pac.text.toString().matches(pacPattern.toRegex())) {
+                pac.error = "Invalid PAC (xxxxxx)"
+            } else {
+                val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
+                val paymentHistory = "${dateFormat.format(Date())}: OnlineBanking: $price"
+                val paymentHistoryRef = database.child(auth.currentUser!!.uid).push()
+
+                paymentHistoryRef.setValue(paymentHistory).addOnSuccessListener {
+                    Toast.makeText(this, "Payment Successful", Toast.LENGTH_SHORT).show()
+                    finish()
+                }.addOnFailureListener {
+                    Toast.makeText(this, it.message.toString(), Toast.LENGTH_SHORT).show()
+                    Log.e("PaymentOnlineBankingError", it.message.toString())
+                }
             }
         }
 
