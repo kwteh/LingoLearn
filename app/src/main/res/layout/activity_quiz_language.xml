@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".ui.quiz.QuizLanguageActivity">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/allerta"
+        android:fontFamily="@font/biorhyme"
         android:text="@string/quiz_select_txt"
-        android:textSize="28sp"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@id/radgroupLanguage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,8 +22,8 @@
 
     <RadioGroup
         android:id="@+id/radgroupLanguage"
-        android:layout_width="234dp"
-        android:layout_height="248dp"
+        android:layout_width="290dp"
+        android:layout_height="258dp"
         android:animateLayoutChanges="true"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/btnNext"
@@ -34,28 +36,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:paddingEnd="83dp"
             android:checked="true"
+            android:fontFamily="@font/allerta"
+            android:paddingEnd="83dp"
             android:text="@string/quiz_rad_english"
-            android:textSize="30sp" />
+            android:textSize="34sp" />
 
         <RadioButton
             android:id="@+id/radChinese"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:fontFamily="@font/allerta"
             android:text="@string/quiz_rad_chinese"
-            android:textSize="30sp" />
+            android:textSize="34sp" />
     </RadioGroup>
 
     <Button
         android:id="@+id/btnNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="131dp"
+        android:layout_height="61dp"
         android:layout_marginBottom="140dp"
+        android:background="@drawable/round_btn"
+        android:backgroundTint="@color/green_500"
         android:padding="10dp"
         android:text="@string/quiz_btn_next"
+        android:textColor="#FDFAFA"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

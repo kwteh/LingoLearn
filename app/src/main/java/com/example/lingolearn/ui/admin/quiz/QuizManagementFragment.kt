@@ -3,12 +3,12 @@ package com.example.lingolearn.ui.admin.quiz
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lingolearn.databinding.FragmentQuizManagementBinding
 import com.example.lingolearn.ui.adapter.QuizAdapter
@@ -44,7 +44,6 @@ class QuizManagementFragment : Fragment() {
         database = FirebaseDatabase.getInstance().getReference("EnglishQuestion")
 
         adapter = QuizAdapter(quizList,
-            onItemClick = { quiz ->  },
             onDeleteClick = { quiz -> showDeleteConfirmationDialog(quiz) },
             onEditClick = {quiz -> editQuizActivity(quiz) }
         )
@@ -79,7 +78,7 @@ class QuizManagementFragment : Fragment() {
 
     private fun showDeleteConfirmationDialog(quiz: Quiz) {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setTitle("Delete Quiz")
+        builder.setTitle("Delete quiz")
         builder.setMessage("Are you sure you want to delete this quiz?")
 
         builder.setPositiveButton("Delete") { dialog, which ->

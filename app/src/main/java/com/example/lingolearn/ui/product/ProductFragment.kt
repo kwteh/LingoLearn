@@ -12,6 +12,7 @@ import com.example.lingolearn.databinding.FragmentProductBinding
 class ProductFragment : Fragment() {
 
     private lateinit var binding: FragmentProductBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

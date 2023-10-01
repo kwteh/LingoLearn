@@ -1,5 +1,7 @@
 package com.example.lingolearn.ui.aboutus
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -44,6 +46,18 @@ class AboutUsFragment : Fragment() {
             binding.aboutUsContentTxt.text = currentInfo.content
             binding.aboutUsCallBtn.visibility = if (currentInfo.showButton) View.VISIBLE else View.INVISIBLE
             binding.aboutUsEmailBtn.visibility = if (currentInfo.showButton) View.VISIBLE else View.INVISIBLE
+        }
+
+        binding.aboutUsEmailBtn.setOnClickListener {
+            val intent = Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "support@lingolearn.com", null))
+            startActivity(intent)
+        }
+
+        binding.aboutUsCallBtn.setOnClickListener {
+            val phoneNo = "tel: 01121772618"
+            val intent = Intent(Intent.ACTION_DIAL)
+            intent.data = Uri.parse(phoneNo)
+            startActivity(intent)
         }
 
         return binding.root

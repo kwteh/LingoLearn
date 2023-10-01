@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".ui.quiz.QuizLoseActivity">
 
     <ImageView
@@ -28,10 +29,14 @@
 
     <Button
         android:id="@+id/tryAgainBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="113dp"
+        android:layout_height="54dp"
         android:layout_marginBottom="130dp"
+        android:background="@drawable/round_btn"
+        android:backgroundTint="@color/green_500"
         android:text="@string/quiz_retry_button"
+        android:textColor="#F3EDED"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".ui.admin.quiz.QuizAddActivity">
 
     <TextView
         android:id="@+id/quiz_add_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/audiowide"
         android:text="Add Quiz"
-        android:textSize="30sp"
+        android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,14 +23,16 @@
         android:id="@+id/quiz_add_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:inputType="text"
         android:hint="Question"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="text"
+        android:textColorHint="#94323030"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_add_title" />
 
     <EditText
@@ -36,12 +40,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:inputType="text"
         android:hint="Correct Answer"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="text"
+        android:textColorHint="#94323030"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_add_question" />
 
     <EditText
@@ -49,12 +57,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:inputType="text"
         android:hint="Wrong Answer"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="text"
+        android:textColorHint="#94323030"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_add_ans1" />
 
     <EditText
@@ -62,12 +74,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:inputType="text"
         android:hint="Wrong Answer"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="text"
+        android:textColorHint="#94323030"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_add_ans2" />
 
     <EditText
@@ -75,30 +91,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:inputType="text"
         android:hint="Wrong Answer"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="text"
+        android:textColorHint="#94323030"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_add_ans3" />
 
     <Button
         android:id="@+id/quiz_add_cancel_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="113dp"
+        android:layout_height="46dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/round_btn"
+        android:backgroundTint="#FD0404"
         android:text="Cancel"
+        android:textColor="#F8F5F5"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_add_ans4" />
 
     <Button
         android:id="@+id/quiz_add_submit_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="180dp"
-        android:text="Submit"
-        app:layout_constraintStart_toEndOf="@+id/quiz_add_cancel_btn"
+        android:layout_width="134dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/round_btn"
+        android:backgroundTint="@color/green_500"
+        android:text="ADD"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_add_ans4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

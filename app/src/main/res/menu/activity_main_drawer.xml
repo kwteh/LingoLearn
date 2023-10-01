@@ -13,10 +13,6 @@
             android:icon="@drawable/account"
             android:title="@string/menu_account" />
         <item
-            android:id="@+id/nav_product"
-            android:icon="@drawable/product"
-            android:title="Product" />
-        <item
             android:id="@+id/nav_quiz"
             android:icon="@drawable/quiz"
             android:title="@string/menu_quiz" />
@@ -24,6 +20,14 @@
             android:id="@+id/nav_vocabulary"
             android:icon="@drawable/vocabulary"
             android:title="@string/menu_vocabulary" />
+        <item
+            android:id="@+id/nav_product"
+            android:icon="@drawable/product"
+            android:title="Product" />
+        <item
+            android:id="@+id/nav_payment_history"
+            android:icon="@drawable/product"
+            android:title="Payment History" />
         <item
             android:id="@+id/nav_aboutus"
             android:icon="@drawable/ic_baseline_question_answer_24"
@@ -36,5 +40,9 @@
             android:id="@+id/nav_profile_management"
             android:icon="@drawable/account"
             android:title="Profile Management" />
+        <item
+            android:id="@+id/nav_vocabulary_management"
+            android:icon="@drawable/vocabulary"
+            android:title="Vocabulary Management" />
     </group>
 </menu>

@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".ui.admin.quiz.QuizEditActivity">
 
     <TextView
         android:id="@+id/quiz_edit_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/audiowide"
         android:text="Edit Quiz"
-        android:textSize="30sp"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,14 +24,17 @@
         android:id="@+id/quiz_edit_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:inputType="text"
+        android:fontFamily="@font/allerta"
         android:hint="Question"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="text"
+        android:textColorHint="#8D353232"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_edit_title" />
 
     <EditText
@@ -36,12 +42,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:inputType="text"
+        android:fontFamily="@font/allerta"
         android:hint="Correct Answer"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="text"
+        android:textColorHint="#8D353232"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_edit_question" />
 
     <EditText
@@ -49,12 +60,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:inputType="text"
+        android:fontFamily="@font/allerta"
         android:hint="Wrong Answer"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="text"
+        android:textColorHint="#8D353232"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_edit_ans1" />
 
     <EditText
@@ -62,12 +78,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:inputType="text"
+        android:fontFamily="@font/allerta"
         android:hint="Wrong Answer"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="text"
+        android:textColorHint="#8D353232"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_edit_ans2" />
 
     <EditText
@@ -75,30 +96,45 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:inputType="text"
+        android:fontFamily="@font/allerta"
         android:hint="Wrong Answer"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="text"
+        android:textColorHint="#8D353232"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_edit_ans3" />
 
     <Button
         android:id="@+id/quiz_edit_cancel_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="117dp"
+        android:layout_height="47dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/round_btn"
+        android:backgroundTint="#FD0606"
         android:text="Cancel"
+        android:textColor="#FFFEFE"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_edit_ans4" />
 
     <Button
         android:id="@+id/quiz_edit_submit_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="180dp"
+        android:layout_width="119dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/round_btn"
+        android:backgroundTint="@color/green_500"
         android:text="Submit"
-        app:layout_constraintStart_toEndOf="@+id/quiz_edit_cancel_btn"
+        android:textColor="#FAF5F5"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_edit_ans4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -54,8 +54,10 @@
         <TextView
             android:id="@+id/about_us_content_txt"
             android:layout_width="358dp"
-            android:layout_height="456dp"
-            android:layout_marginTop="40dp"
+            android:layout_height="420dp"
+            android:layout_marginTop="30dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:background="#B9FFFCFC"
             android:backgroundTint="#FFFFFF"
             android:drawableTint="#090909"
@@ -64,7 +66,6 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="@+id/about_us_title_txt"
-            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="@+id/about_us_title_txt"
             app:layout_constraintTop_toBottomOf="@+id/about_us_title_txt" />
 
@@ -72,16 +73,13 @@
             android:id="@+id/about_us_logo"
             android:layout_width="107dp"
             android:layout_height="105dp"
-            android:layout_marginTop="28dp"
-            android:width="2dp"
+            android:layout_marginBottom="35dp"
             android:contentDescription="Logo"
             android:src="@drawable/lingonback"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/about_us_call_btn"
-            app:layout_constraintHorizontal_bias="0.512"
             app:layout_constraintStart_toEndOf="@+id/about_us_email_btn"
-            app:layout_constraintTop_toBottomOf="@+id/about_us_content_txt"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/about_us_content_txt" />
 
         <Button
             android:id="@+id/about_us_email_btn"
@@ -90,8 +88,9 @@
             android:background="@drawable/round_btn"
             android:text="Email"
             android:textSize="16sp"
+            android:textColor="#FDFDFD"
             android:visibility="invisible"
-            app:backgroundTint="@color/purple_500"
+            app:backgroundTint="@color/green_500"
             app:layout_constraintBottom_toBottomOf="@+id/about_us_logo"
             app:layout_constraintStart_toStartOf="@+id/about_us_content_txt"
             app:layout_constraintTop_toTopOf="@+id/about_us_logo"
@@ -104,8 +103,9 @@
             android:background="@drawable/round_btn"
             android:text="Call"
             android:textSize="16sp"
+            android:textColor="#FDFDFD"
             android:visibility="invisible"
-            app:backgroundTint="@color/purple_500"
+            app:backgroundTint="@color/green_500"
             app:layout_constraintBottom_toBottomOf="@+id/about_us_logo"
             app:layout_constraintEnd_toEndOf="@+id/about_us_content_txt"
             app:layout_constraintTop_toTopOf="@+id/about_us_logo"

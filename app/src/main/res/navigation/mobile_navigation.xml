@@ -9,7 +9,7 @@
         android:id="@+id/nav_home"
         android:name="com.example.lingolearn.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/app_bar_main" />
+        tools:layout="@layout/fragment_home" />
     <activity
         android:id="@+id/nav_quiz"
         android:name="com.example.lingolearn.ui.quiz.QuizLanguageActivity"
@@ -31,6 +31,11 @@
         android:label="Products"
         tools:layout="@layout/fragment_product" />
     <fragment
+        android:id="@+id/nav_vocabulary"
+        android:name="com.example.lingolearn.ui.vocabulary.VocabularyFragment"
+        android:label="Vocabulary"
+        tools:layout="@layout/fragment_vocabulary" />
+    <fragment
         android:id="@+id/nav_quiz_management"
         android:name="com.example.lingolearn.ui.admin.quiz.QuizManagementFragment"
         android:label="Quiz Management"
@@ -40,4 +45,14 @@
         android:name="com.example.lingolearn.ui.admin.profile.ProfileManagementFragment"
         android:label="Profile Management"
         tools:layout="@layout/fragment_profile_management" />
+    <fragment
+        android:id="@+id/nav_vocabulary_management"
+        android:name="com.example.lingolearn.ui.admin.vocabulary.VocabularyManagementFragment"
+        android:label="Vocabulary Management"
+        tools:layout="@layout/fragment_vocabulary_management" />
+    <fragment
+        android:id="@+id/nav_payment_history"
+        android:name="com.example.lingolearn.ui.payment.PaymentHistoryFragment"
+        android:label="Payment History"
+        tools:layout="@layout/fragment_payment_history" />
 </navigation>

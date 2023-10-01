@@ -1,9 +1,9 @@
 package com.example.lingolearn.ui.admin.quiz
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.lingolearn.databinding.ActivityQuizAddBinding
 import com.example.lingolearn.ui.quiz.Quiz
 import com.google.firebase.database.DataSnapshot
@@ -16,6 +16,7 @@ class QuizAddActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityQuizAddBinding
     private lateinit var database: DatabaseReference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQuizAddBinding.inflate(layoutInflater)

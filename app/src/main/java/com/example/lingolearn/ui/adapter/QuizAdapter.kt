@@ -11,7 +11,6 @@ import com.example.lingolearn.ui.quiz.Quiz
 
 class QuizAdapter(
     private val quizList: List<Quiz>,
-    private val onItemClick: (Quiz) -> Unit,
     private val onDeleteClick: (Quiz) -> Unit,
     private val onEditClick: (Quiz) -> Unit
 ) : RecyclerView.Adapter<QuizAdapter.ViewHolder>() {
@@ -32,10 +31,6 @@ class QuizAdapter(
             quizAns2.text = quiz.answers!![1]
             quizAns3.text = quiz.answers!![2]
             quizAns4.text = quiz.answers!![3]
-
-            itemView.setOnClickListener {
-                onItemClick(quiz)
-            }
 
             deleteBtn.setOnClickListener {
                 onDeleteClick(quiz)
